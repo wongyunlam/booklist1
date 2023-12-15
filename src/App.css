@@ -11,42 +11,68 @@ body {
     color: #222;
 }
 
-.booklist {
+.app {
+    max-width: 1280px;
+    margin: 3rem auto;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #617d98;
+}
+
+.list {
     width: 90vw;
     max-width: 1170px;
-    margin: 5rem auto;
+    margin: 2rem auto;
     display: grid;
     gap: 2rem;
 }
 
 .book {
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     text-align: center;
+    position: relative;
 
     img {
         width: 100%;
         border-radius: 5px;
-        object-fit: cover;
+        object-fit: contain;
+        height: 200px;
+        /* border: 1px solid #ddd; */
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.5rem;
         margin-top: 1rem;
     }
 
     h4 {
         color: #617d98;
-        font-size: 0.75rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
+    }
+
+    .number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-top-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-color: #617d98;
+        color: #fff;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .booklist {
+    .list {
         grid-template-columns: repeat(3, 1fr);
     }
 }
